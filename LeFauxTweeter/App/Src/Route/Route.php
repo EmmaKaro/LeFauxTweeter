@@ -1,13 +1,14 @@
 <?php
 
 
-class Route {
+class Route
+{
     /**
      * @var string
      */
     private $method;
 
-    /**
+    /** 
      * @var string
      */
     private $pattern;
@@ -23,27 +24,20 @@ class Route {
     private $arguments;
 
     /**
-     * @param string   $method
-     * @param string   $pattern
+     * Root constructor.
+     * @param string $method
+     * @param string $pattern
      * @param callable $callable
      */
-    public function __construct($method, $pattern, $callable)
-    {
-        $this->method    = $method;
-        $this->pattern   = $pattern;
-        $this->callable  = $callable;
+    public function __construct(string $method, string $pattern, callable $callable) {
+        $this->method = $method;
+        $this->pattern = $pattern;
+        $this->callable = $callable;
         $this->arguments = array();
     }
 
-    /**
-     * @param string $method
-     * @param string $uri
-     *
-     * @return boolean
-     */
-    public function match($method, $uri)
-    {
-        if ($method !== $this->method) {
+    public function match(string $method, string $uri) {
+        if ($this->method !== $method) {
             return false;
         }
 
@@ -56,10 +50,14 @@ class Route {
         return false;
     }
 
+    private function compilePattern() {
+        return sprintf('#^%s$#', $this->pattern);
+    }
+
     /**
      * @return string
      */
-    public function getMethod()
+    public function getMethod(): string
     {
         return $this->method;
     }
@@ -67,7 +65,7 @@ class Route {
     /**
      * @return string
      */
-    public function getPattern()
+    public function getPattern(): string
     {
         return $this->pattern;
     }
@@ -75,7 +73,7 @@ class Route {
     /**
      * @return callable
      */
-    public function getCallable()
+    public function getCallable(): callable
     {
         return $this->callable;
     }
@@ -83,13 +81,8 @@ class Route {
     /**
      * @return array
      */
-    public function getArguments()
+    public function getArguments(): array
     {
         return $this->arguments;
-    }
-
-    private function compilePattern()
-    {
-        return sprintf('#^%s$#', $this->pattern);
     }
 }
