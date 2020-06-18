@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 18 juin 2020 à 11:38
+-- Généré le : jeu. 18 juin 2020 à 21:51
 -- Version du serveur :  10.4.11-MariaDB
 -- Version de PHP : 7.4.6
 
@@ -28,6 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `follow` (
+  `follow_id` int(11) NOT NULL,
   `follow_user_id` int(11) NOT NULL,
   `follower_user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -39,6 +40,7 @@ CREATE TABLE `follow` (
 --
 
 CREATE TABLE `likes` (
+  `like_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `tweet_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -50,6 +52,7 @@ CREATE TABLE `likes` (
 --
 
 CREATE TABLE `retweet` (
+  `retweet_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `tweet_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -93,6 +96,7 @@ CREATE TABLE `user` (
 -- Index pour la table `follow`
 --
 ALTER TABLE `follow`
+  ADD PRIMARY KEY (`follow_id`),
   ADD KEY `follow` (`follower_user_id`),
   ADD KEY `follower` (`follow_user_id`);
 
@@ -100,6 +104,7 @@ ALTER TABLE `follow`
 -- Index pour la table `likes`
 --
 ALTER TABLE `likes`
+  ADD PRIMARY KEY (`like_id`),
   ADD KEY `like_user` (`user_id`),
   ADD KEY `like_tweet` (`tweet_id`);
 
@@ -107,6 +112,7 @@ ALTER TABLE `likes`
 -- Index pour la table `retweet`
 --
 ALTER TABLE `retweet`
+  ADD PRIMARY KEY (`retweet_id`),
   ADD KEY `retweet_user` (`user_id`),
   ADD KEY `retweet_tweet` (`tweet_id`);
 
@@ -126,6 +132,24 @@ ALTER TABLE `user`
 --
 -- AUTO_INCREMENT pour les tables déchargées
 --
+
+--
+-- AUTO_INCREMENT pour la table `follow`
+--
+ALTER TABLE `follow`
+  MODIFY `follow_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `likes`
+--
+ALTER TABLE `likes`
+  MODIFY `like_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `retweet`
+--
+ALTER TABLE `retweet`
+  MODIFY `retweet_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `tweet`
