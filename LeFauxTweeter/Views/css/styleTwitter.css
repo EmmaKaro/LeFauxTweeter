@@ -180,11 +180,3 @@ footer{
     color: yellow;
 }
 
-footer a:hover {
-    text-decoration: underline;
-    color: yellow;
-}
-
-footer a:visited {
-    color: yellow;
-}
