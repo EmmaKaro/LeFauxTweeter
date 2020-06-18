@@ -25,7 +25,7 @@
 
 <!-- Section d'edit du profil -->
 <article>
-    <form method="post" action="/Le-Faux-Tweeter/traitementChangeProfil">
+    <form method="post" action="indefiniMalheusement">
         <p>
             <input type="text" name="pseudo" id="pseudo" placeholder="Pseudo" size="30" maxlength="10" />
             <input type="text" name="info_perso" id="info_perso" placeholder="bio de l'utilisateur" size="30"/><br/>
