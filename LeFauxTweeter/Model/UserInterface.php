@@ -6,6 +6,6 @@ interface UserInterface
 
     public function update(Array $user);
 
-    public function delete(Array $user);
+    public function delete(Int $id);
    
 }
