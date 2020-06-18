@@ -1,7 +1,7 @@
-<!-- lieu où nous pourrons modifer notre profil-->
+<!-- lieu oÃ¹ nous pourrons modifer notre profil-->
 
 <article>
-    <form method="post" action="/traitementChangeProfil">
+    <form method="post" action="indefiniMalheureusement">
         <p>
             <input type="text" name="pseudo" id="name" placeholder="Pseudo" size="30" maxlength="10" />
             <input type="text" name="bio" id="bio" placeholder="bio de l'utilisateur" size="30"/><br/>
