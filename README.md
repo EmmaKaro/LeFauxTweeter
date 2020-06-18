@@ -24,3 +24,5 @@ Nous avons subi certains soucis de réalisation, mais ce sont surtout des erreur
 - Du côté de Karolane, les fonctions telles que <?php include("menu.php"); ?> affichent bien le menu en haut de la page, prouvant que le problème ne vient pas du code.
   Mais il restait malgré tout des Fatal Error : Not found, empechant l'affichage de la page cherchée alors qu'elle existait bien et que la route était là pourtant.
 Donc la création du Twitter était quelque peu... compliquée à finaliser...
+
+J'ai ajouter le .htaccess dans le dossier vu que dans gihub quand on l'ajoute il dis que c'est un fichier hidden, j'avais peur qu'il ne soit pas pris en compte
