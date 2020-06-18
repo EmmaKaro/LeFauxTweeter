@@ -41,16 +41,10 @@ class UserModel implements UserInterface {
         if(! $executed) throw new \Error('Update Failed');
     }
 
-    public function delete(Array $user) : void {
+    public function delete(Int $id) : void {
         $query=$this->conn->prepare ('DELETE FROM user WHERE id= :id');
         $executed = $query->execute([
-            ':name' => $user ['user_name'], 
-            ':family_name' => $user ['user_family_name'],
-            ':pseudo' => $user ['user_pseudo'],
-            ':mail' => $user ['user_mail'],
-            ':password' => $user ['user_password'],
-            ':birth' => $user ['user_birth'],
-            ':infoPerso' => $user ['infoPerso']
+            ':id'=>$id
         ]);
         if(! $executed) throw new \Error('Delete Failed');
   
