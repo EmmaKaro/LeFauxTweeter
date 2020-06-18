@@ -8,12 +8,12 @@ class UserController extends ControllerBase
         try { // on utilise un try catch pour renvoyer vers une erreur si la requête n'a pas fonctionné
             $user = [
                 
-                'name' => $_POST['name'],
-                'family_name' => $_POST['family_name'],
-                'pseudo' => $_POST['pseudo'],
-                'mail' => $_POST ['mail'],
-                'password' => $_POST ['password'],
-                'birth' => $_POST ['birth']
+                'user_name' => $_POST['user_name'],
+                'user_family_name' => $_POST['user_family_name'],
+                'user_pseudo' => $_POST['user_pseudo'],
+                'user_mail' => $_POST ['user_mail'],
+                'user_password' => $_POST ['user_password'],
+                'user_birth' => $_POST ['user_birth']
             ];
 
             $result = $this->model->inset($user);
