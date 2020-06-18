@@ -30,8 +30,8 @@
     <li>
         <h8><?php echo $tweet["user_name"]; ?></h8><h10><?php echo $tweet["tweet_date"];?></h10>
         <h9><?php echo $tweet["tweet_content"]; ?></h9>
-        <a href="/Le-Faux-Tweeter/traitementRetweet/<?php echo $tweet["tweet_id"] ?>">  <h10>Retweeter</h10> </a>
-        <a href="/Le-Faux-Tweeter/traitementLike/<?php echo $tweet["tweet_id"] ?>">  <h12>J'aime </h12> </a>
+        <a href="indefiniMalheureusement/<?php echo $tweet["tweet_id"] ?>">  <h10>Retweeter</h10> </a>
+        <a href="indefiniMalheuresement/<?php echo $tweet["tweet_id"] ?>">  <h12>J'aime </h12> </a>
     </li>
 <?php endforeach; ?>
 
