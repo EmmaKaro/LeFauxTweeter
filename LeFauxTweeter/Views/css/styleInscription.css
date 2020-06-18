@@ -51,11 +51,12 @@ form{
     -o-transition: all 0.30s ease-in-out;
     outline: none;
 }
+
 .form-style-1 input[type=text]:focus,.form-style-1 input[type=password]:focus, .form-style-1 input[type=date]:focus{
-    -moz-box-shadow: 0 0 8px #96dfcb;
-    -webkit-box-shadow: 0 0 8px #96dfcb;
-    box-shadow: 0 0 8px #96dfcb;
-    border: 1px solid #96dfcb;
+    -moz-box-shadow: 0 0 8px #ffd100;
+    -webkit-box-shadow: 0 0 8px #ffd100;
+    box-shadow: 0 0 8px #ffd100;
+    border: 1px solid orange;
 }
 
 .form-style-1 .field-divided{
