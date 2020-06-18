@@ -1,5 +1,4 @@
-<!-- liste des personnes correspondantes aux caractères de la recherche-->
-
+<!-- affichage des personnes correspondantes aux caractÃ¨res de la recherche-->
 <article>
     <h5>Suivre</h5>
     <h6><?php echo $user->getPseudo(); ?></h6>
