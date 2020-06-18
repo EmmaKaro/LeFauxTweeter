@@ -4,7 +4,7 @@ require_once __DIR__ . '/Route/Route.php';
 
 class App
 {
-    const GET = 'Get';
+    const GET = 'GET';
     const POST = 'POST';
     const PUT = 'PUT';
     const DELETE = 'DELETE';
@@ -26,13 +26,32 @@ class App
         return $this;
     }
 
+    public function post ($pattern, $callable){
+        $this->registreRoute(self::POST, $pattern, $callable);
+
+        return $this;
+    }
+
+    public function put ($pattern, $callable){
+        $this->registreRoute(self::PUT, $pattern, $callable);
+
+        return $this;
+    }
+    
+    public function delete ($pattern, $callable){
+        $this->registreRoute(self::DELETE, $pattern, $callable);
+
+        return $this;
+    }
+
     public function run() {
         $method = $_SERVER['REQUEST_METHOD'] ?? self::GET;
         $uri = substr($_SERVER['REQUEST_URI'], 14) ?? '/'; 
-
+        
         foreach ($this->routes as $route){
             if($route->match($method, $uri)) {
                 return $this->process($route);
+    
             }
         }
 
