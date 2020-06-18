@@ -4,16 +4,16 @@
 <head>
     <meta charset="utf-8" />
     <title>Twitter</title>
+    <!-- inclusion de la partie css -->
     <link rel="stylesheet"  href="css/styleTL.css">
 </head>
 
 <body>
 
-<!--menu-->
-
+<!-- inclusion du menu -->
 <?php include("menu.php"); ?>
 
-<!-- Rapide apperçu du profil -->
+<!-- aperçu du profil -->
 <section>
     <h4><?php echo $_SESSION['pseudo']; ?></h4>
     <h5>@<?php echo $_SESSION['user_name']; ?></h5>
@@ -22,9 +22,7 @@
     <a href="/Le-Faux-Tweeter/traitementDeconnection" ><h20>Se Déconnecter</h20></a>
 </section>
 
-<!-- tlTweet-->
-
-
+<!-- Section tweets -->
 <?php foreach ($params['tweets'] as $tweets) : ?>
 
     <li>
@@ -33,8 +31,8 @@
         <a href="/Le-Faux-Tweeter/traitementRetweet/<?php echo $tweets["tweet_id"] ?>">  <h10>Retweeter</h10> </a><a href="/Le-faux-Tweeter/traitementLike/<?php echo $tweets["tweet_id"] ?>">  <h12>J'aime </h12> </a>
     </li>
 <?php endforeach; ?>
-<!-- Le pied de page -->
-
+    
+<!-- inclusion du pied de page -->
 <?php include("pied_de_page.php"); ?>
 
 </body>
