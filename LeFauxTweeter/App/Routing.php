@@ -18,9 +18,10 @@ class Routing {
     }
 
     public function setup() {
-        $this->app->get('/', function(){
-            $user = new userController(
-                $this->seupModel('UserModel', $this->setupDatabase())
+        $this->app->post('/Inscrip', function(){
+            $user = new UserController(
+                $this->setupModel('UserModel', $this->setupDatabase())
+            
             );
             $user->createUser();
         });
@@ -39,8 +40,7 @@ class Routing {
 
     private function setupModel(string $modelName, Database $Database){
         $model= new $modelName($Database);
-
+        
         return $model;
     }
 }
-    
