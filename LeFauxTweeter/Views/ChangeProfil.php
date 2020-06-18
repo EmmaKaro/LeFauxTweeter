@@ -36,8 +36,11 @@
     </form>
 </article>
 
+    <!-- inclusion des images -->
+    <img class="phoenix1" src="img/Phoenix_right.png" HEIGHT="350" alt="un phoenix a droite de l'ecran">
+    <img class="phoenix2" src="img/Phoenix_left.png" HEIGHT="350" alt="un phoenix a gauche de l'ecran">
+    
 <!-- inclusion du pied de page -->
-
 <?php include("pied_de_page.php"); ?>
 
 </body>
