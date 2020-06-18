@@ -3,28 +3,24 @@
 <head>
     <meta charset="utf-8" />
     <title>Twitter</title>
+    <!-- insertion de la partie css -->
     <link rel="stylesheet"  href="css/styleProfilAbonnement.css">
 </head>
 
 <body>
 
-<!--menu-->
-
+<!-- inclusion du menu -->
 <?php include("menu.php"); ?>
 
-<!-- Petit menu: tweets, abonnements, abonnés, j'aime-->
-
+<!-- Bandeau de tweets, abonnements, abonnés, j'aime et edit -->
 <section>
     <a href="profilTweet.php"><h4>Tweets</h4></a><a href="profilAbonnement.php"><h4>Abonnements</h4></a><a href="profilAbonnes.php"><h4>Abonnés</h4></a><a href="profilLike.php"><h4>J'aime</h4></a><a href="changeProfil.php"><h14>Editer le profil</h14></a>
 </section>
 
-<!-- courte description du profil-->
-
+<!-- inclusion description du profil -->
 <?php include("descriptionProfil.php"); ?>
 
-<!-- nos abonnement-->
-
-
+<!-- Section des abonnements -->
 <?php foreach ($params['users'] as $user) : ?>
     <li>
         <a href="traitementSuivre/<?php echo $user->getId() ?>">  <h15>Désabonner</h15> </a>
@@ -34,8 +30,7 @@
     </li>
 <?php endforeach; ?>
 
-<!-- Le pied de page -->
-
+<!-- inclusion du pied de page -->
 <?php include("pied_de_page.php"); ?>
 
 </body>
