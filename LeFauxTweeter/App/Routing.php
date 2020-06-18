@@ -18,13 +18,16 @@ class Routing {
     }
 
     public function setup() {
-        $this->app->post('/Inscrip', function(){
+        $this->app->get('/', function(){
             $user = new UserController(
                 $this->setupModel('UserModel', $this->setupDatabase())
             
             );
-            $user->createUser();
+            
+            $user-> ??
         });
+        this->app->post('/Inscrip', [$user, 'createUser']);
+        
     }
 
     private function setupDatabase() : Database{
@@ -32,8 +35,8 @@ class Routing {
             "127.0.0.1",
             "tweeter",
             "root",
-            "root",
-            "8889"
+            "",
+            "3306"
         );
         return $Database;
     }
@@ -44,3 +47,4 @@ class Routing {
         return $model;
     }
 }
+    
