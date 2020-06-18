@@ -28,10 +28,10 @@
 <?php foreach ($params['tweets'] as $tweets) : ?>
 
     <li>
-        <?php if ($tweets["tweet_id"] == $_SESSION['id']) {?> <a href="Le-Faux-Tweeter/traitementSuppTweet/<?php echo $tweets["tweet_id"] ?>">  <h15>Supprimer</h15></a> <?php }?>
+        <?php if ($tweets["tweet_id"] == $_SESSION['id']) {?> <a href="deleteNormalementMaisMalheureusement/<?php echo $tweets["tweet_id"] ?>">  <h15>Supprimer</h15></a> <?php }?>
         <h8><?php echo $tweets["user_name"]; ?></h8><h10><?php echo $tweets["tweet_date"];?></h10>
         <h9><?php echo $tweets["tweet_content"]; ?></h9>
-        <a href="/Le-Faux-Tweeter/traitementRetweet/<?php echo $tweets["tweet_id"] ?>">  <h10>Retweeter</h10> </a>
+        <a href="indefinisMalheureusement/<?php echo $tweets["tweet_id"] ?>">  <h10>Retweeter</h10> </a>
         <a href="traitementLike.php/<?php echo $tweets["tweet_id"] ?>"><h12>J'aime </h12> </a>
     </li>
 <?php endforeach; ?>
