@@ -3,20 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <title>Twitter</title>
+    <!-- insertion de la partie css -->
     <link rel="stylesheet"  href="css/styleRecherche.css">
 </head>
 
 <body>
 
-<!--menu-->
-
+<!-- inclusion du menu -->
 <?php include("menu.php"); ?>
 
 <h4><?php echo htmlspecialchars($_POST['recherche']);?></h4>
 
-<!-- liste des personnes correspondantes aux caractéres de la recherche-->
-
-
+<!-- recherche des personnes correspondantes aux caractéres de la recherche-->
  <?php foreach ($params['users'] as $user) : ?>
 <li>
     <a href="/Le-Faux-Tweeter/traitementSuivre/<?php echo $user->getId() ?>">  <h5>Suivre</h5> </a>
@@ -26,8 +24,7 @@
 </li>
 <?php endforeach; ?>
 
-<!-- Le pied de page -->
-
+<!-- inclusion du pied de page -->
 <?php include("pied_de_page.php"); ?>
 
 </body>
