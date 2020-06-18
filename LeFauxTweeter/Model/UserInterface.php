@@ -2,10 +2,10 @@
 
 interface UserInterface
 {
-    public function insert(Array $user);
+    public function insert(Array $tab);
 
-    public function update(Array $user);
+    public function update();
 
-    public function delete(Int $id);
+    public function delete();
    
 }
