@@ -1,8 +1,8 @@
-<!-- Le menu -->
-
+<!-- Menu du site -->
 <nav id="menu">
     <ul class="form-style-1">
-        <a href="tl.php"><h1>Accueil</h1></a><form action="/traitementRecherche.php" method="post">
+        <a href="tl.php"><h1>Accueil</h1></a>
+        <form action="/traitementRecherche.php" method="post">
             <p>
                 <input type="text" name="recherche" id="recherche" class="fiel-divided" placeholder="Recherchez sur Twitter"  />
                 <input type="submit" value="Rechercher" />
