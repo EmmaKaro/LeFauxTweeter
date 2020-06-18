@@ -27,8 +27,8 @@
 <!-- Section des abonnements -->
 <?php foreach ($params['users'] as $user) : ?>
     <li>
-        <a href="/Le-Faux-Teewter/traitementSuivre/<?php echo $user->getId() ?>">  <h5>Suivre</h5> </a>
-        <a href="/Le-Faux-Tweeter/profilOtherPeopleAbonnement/<?php echo $user->getId() ?>"><h16><?php echo $user->getPseudo(); ?></h16></a>        <h7>@<?php echo $user->getUserName(); ?></h7>
+        <a href="indefiniMalheureusement/<?php echo $user->getId() ?>">  <h5>Suivre</h5> </a>
+        <a href="indefiniMalheureusement/<?php echo $user->getId() ?>"><h16><?php echo $user->getPseudo(); ?></h16></a>        <h7>@<?php echo $user->getUserName(); ?></h7>
         <h8><?php echo $user->getInfoPerso(); ?></h8>
     </li>
 <?php endforeach; ?>
