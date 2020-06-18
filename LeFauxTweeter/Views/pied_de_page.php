@@ -1,4 +1,4 @@
 <!-- Pied de page du site -->
 <footer id="pied_de_page">
-    <p>Copyright 2020 Le-Faux-Tweeter</p>
+    <p>Copyright 2020 LeFauxTweeter</p>
 </footer>
